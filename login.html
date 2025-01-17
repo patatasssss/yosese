@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Access Module</title>
+    <link rel="stylesheet" href="login/style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/icon.png">
+</head>
+
+<body background="assets/image.jpg">
+    <div class="container">
+
+        <h1 class="university-title"></h1>
+        <div class="login-form">
+            <h2>Student Access Module</h2>
+            <form>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+
+                <label for="password">Password</label>
+                <div class="password-field">
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                    <img src="assets/hide.png" alt="Show/Hide Password"  
+                    id="eyeicon"
+                    class="toggle-password"> 
+                </div>
+
+                <button type="button" class="login-btn" onclick="location.href='home.html'">Login</button>
+
+                
+            </form>
+
+            <h6>
+                No Account? <a href="signupform.html">Create Here</a>
+            </h6>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    let eyeicon = document.getElementById("eyeicon");
+    let password = document.getElementById("password");
+
+    eyeicon.onclick = function() {
+        if(password.type == "password") {
+            password.type = "text";
+            eyeicon.src = "assets/visible.png"; 
+        } else {
+            password.type = "password";
+            eyeicon.src = "assets/hide.png"; 
+        }
+    }
+</script>
+
+
+<script>
+    // Array of background images
+    const backgrounds = [
+        'url("assets/image.jpg")',
+        'url("assets/image2.png")',
+        'url("assets/image3.png")',
+    ];
+    
+    let currentBackgroundIndex = 0;
+
+    // Function to update the background
+    function updateBackground() {
+        document.body.style.backgroundImage = backgrounds[currentBackgroundIndex];
+    }
+
+    // Listen for scroll events
+    window.addEventListener('wheel', (event) => {
+        if (event.ctrlKey) {
+            event.preventDefault(); // Prevent default browser zoom behavior
+
+            if (event.deltaY < 0) {
+                // Scroll up
+                currentBackgroundIndex = (currentBackgroundIndex - 1 + backgrounds.length) % backgrounds.length;
+            } else {
+                // Scroll down
+                currentBackgroundIndex = (currentBackgroundIndex + 1) % backgrounds.length;
+            }
+            updateBackground();
+        }
+    });
+
+    // Initialize with the first background
+    updateBackground();
+</script>
+
+</html>

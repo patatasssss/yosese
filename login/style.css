@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover; 
+  }
+
+  
+  
+  .container {
+    text-align: center;
+  }
+  
+  .university-title {
+    font-size: 2rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+  }
+  
+  .login-form {
+    background: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 340px;
+    height: 380px;
+    text-align: left;
+  }
+  
+  .login-form h2 {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .login-form label {
+    font-size: 14px;
+    color: #333333;
+    margin-top: 40px;
+    margin: 5px;
+    display: block;
+  }
+  
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 321px;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+  }
+  
+  .password-field {
+    position: relative;
+  }
+  
+  .password-field input {
+    width: calc(100% - 30px);
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666666;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .options a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #006400;
+  }
+  
+  .login-btn {
+    background: #006400;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-width: thin;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 60px;
+  }
+  
+  .sign-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .sign-btn {
+    background: #006400;
+    color: #ffffff;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+    margin: 0 5px;
+  }
+  
+  .sign-btn:first-child {
+    margin-left: 0;
+  }
+  
+  .sign-btn:last-child {
+    margin-right: 0;
+  }
+  
+  h6 {
+    font-weight: normal;
+  }
+
+
+
+.password-field { 
+    position: relative;
+}
+
+.password-field input {
+    width: calc(100% - 30px); /* Adjusted width for image space */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666666;
+    width: 24px; /* Set desired width */
+    height: 24px; /* Set desired height */
+}
